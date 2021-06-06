@@ -36,10 +36,11 @@
     },
     methods: {
       quoteAddFunc(quote){
-        if(this.quotes.length >= this.maxQuotes){
+        if(this.quotesArr.length >= this.maxQuotes) {
           return alert('Please delete quotes first');
+        }else {
+          this.quotesArr.push(quote);
         }
-        this.quotesArr.push(quote);
       },
       removeQuote(index){
         this.quotesArr.splice(index, 1);
